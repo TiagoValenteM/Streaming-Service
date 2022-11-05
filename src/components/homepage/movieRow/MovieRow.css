@@ -1,0 +1,106 @@
+.movieRow {
+    margin: 20px 0;
+}
+.movieRow h2 {
+    margin-left: 3vw;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.movieRow--list{
+    position: relative;
+    overflow-x: hidden;
+}
+
+.movieRow--listarea{
+    transition: all ease 0.5s;
+}
+
+.movieRow--item{
+    display: inline-block;
+    width: 300px;
+    cursor: pointer;
+    position: relative;
+}
+
+.movieRow--itemName{
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    bottom: 10%;
+    left: 10%;
+    max-width: 70%;
+    font-size: 18px;
+    font-weight: 550;
+    visibility: hidden;
+}
+
+.movieRow--item img{
+    width: 100%;
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+    border-radius: 6px;
+    border:solid rgba(255,255,255,0) 3px;
+    box-shadow: rgb(2 2 2 / 52%) 0px 26px 30px -10px, rgb(2 2 2 / 50%) 0px 16px 10px -10px;
+}
+.movieRow--item:hover img{
+    transform: scale(1);
+    transition-duration: 0.3s;
+    border:  solid rgba(255,255,255,1) 3px;
+    -webkit-filter: brightness(0.5);
+    box-shadow: rgb(0 0 0 / 65%) 0px 40px 58px -16px, rgb(0 0 0 / 62%) 0px 30px 22px -10px;
+}
+.movieRow--item:hover .movieRow--itemName{
+    visibility: visible;
+    transition: visibility ease 0.3s;
+}
+
+
+.movieRow--itemHighlight{
+    display: inline-block;
+    width: 220px;
+    cursor: pointer;
+}
+.movieRow--itemHighlight img{
+    width: 100%;
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+    border-radius: 6px;
+    box-shadow: rgb(2 2 2 / 52%) 0px 26px 30px -10px, rgb(2 2 2 / 50%) 0px 16px 10px -10px;
+}
+.movieRow--itemHighlight img:hover{
+    transform: scale(1);
+    transition-duration: 0.3s;
+    border:  solid rgba(255,255,255,0.5) 3px;
+    box-shadow: rgb(0 0 0 / 65%) 0px 40px 58px -16px, rgb(0 0 0 / 62%) 0px 30px 22px -10px;
+}
+
+.movieRow--left,
+.movieRow--right{
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    z-index: 99;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
+}
+
+.movieRow--left{
+    left: 0;
+    background: linear-gradient(to right, rgba(4,4,4,0.5) 10%, transparent 80%);
+}
+
+.movieRow--right{
+    right: 0;
+    background: linear-gradient(to left, rgba(4,4,4,0.5) 10%, transparent 80%);
+}
+
+.movieRow--left:hover,
+.movieRow--right:hover{
+    opacity: 1;
+}

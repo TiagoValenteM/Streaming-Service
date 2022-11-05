@@ -1,0 +1,24 @@
+footer{
+    background-color: #141414 ;
+    padding: 1vh 0;
+}
+
+.footer--logo{
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    margin: 1vh 0;
+}
+
+.footer--logo img{
+    height: 100%;
+}
+
+.footer--menu{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    margin: 2vh 0;
+    font-weight: 600;
+    color: #999999;
+}
