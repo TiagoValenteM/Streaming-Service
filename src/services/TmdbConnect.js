@@ -3,8 +3,7 @@ const API_BASE = "https://api.themoviedb.org/3";
 
 const titlesFetch = async (titlesData) => {
   const request = await fetch(`${API_BASE}${titlesData}`);
-  const jsonResult = await request.json();
-  return jsonResult;
+  return await request.json();
 };
 
 export default {
